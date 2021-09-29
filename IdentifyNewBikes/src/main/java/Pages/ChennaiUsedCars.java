@@ -8,10 +8,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Base.Base;
+import DriverSetup.DriverSetup;
+import utils.ExtentReportManager;
 import utils.excel;
 
-public class ChennaiUsedCars extends Base
+public class ChennaiUsedCars extends DriverSetup
 {
 	By ucars=By.linkText("Used Cars");
 	By chennai=By.linkText("Chennai");
@@ -21,7 +22,7 @@ public class ChennaiUsedCars extends Base
 	
 	public void clickUsedCars()  // Method to click used_cars
 	{
-		logger = report.createTest("Used Cars and Popular Model");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Used Cars and Popular Model");
 		try{
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(ucars));
@@ -32,15 +33,15 @@ public class ChennaiUsedCars extends Base
 		driver.findElement(chennai).click();
 		String usedCars = driver.findElement(By.xpath("//h1[@id='usedcarttlID']")).getText();
 		if (usedCars.contains("Used Cars in Chennai")) 
-		reportPass("Used Cars in chennai are displayed");
+			ExtentReportManager.reportPass("Used Cars in chennai are displayed");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 		
 	}
 	public void clickPopularModels() // Method to click popular_models
 	{
-		logger = report.createTest("Obtaining Popular Models");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Obtaining Popular Models");
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(popularmodels));
@@ -56,9 +57,9 @@ public class ChennaiUsedCars extends Base
 			System.out.println(ls.get(i).getText());
 			excel.writeToExcel(ls.get(i).getText(), i + 1, 3);
 		}
-		reportPass("Popular models are printed");
+		ExtentReportManager.reportPass("Popular models are printed");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 

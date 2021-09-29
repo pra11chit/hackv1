@@ -1,6 +1,7 @@
 package Pages;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,10 +12,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Base.Base;
+import DriverSetup.DriverSetup;
+import utils.ExtentReportManager;
 import utils.excel;
 
-public class HondaDetails extends Base {
+public class HondaDetails extends DriverSetup {
 	
 	
 	By nbikes = By.linkText("New Bikes");
@@ -29,7 +31,7 @@ public class HondaDetails extends Base {
 
 	public void clickUpcomingBikes() // Method to click Upcoming_bikes
 	{
-		logger = report.createTest("Upcoming Bikes");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Upcoming Bikes");
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(nbikes));
@@ -41,15 +43,15 @@ public class HondaDetails extends Base {
 			//String str = driver.findElement(By.xpath("(//span[@itemprop='name'])[2]")).getText();/html/body/div[10]/ol/li[2]/span
 			String str = driver.findElement(By.xpath("/html/body/div[10]/ol/li[2]/span")).getText();
 			if (str.contains("Upcoming Bikes"))
-				reportPass("Upcoming bikes has been opened");
+				ExtentReportManager.reportPass("Upcoming bikes has been opened");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 
 	public void selectManufacturer() // Method to select the Manufacturer
 	{
-		logger = report.createTest("Honda Manufacturer");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Honda Manufacturer");
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(smanuf));
@@ -59,9 +61,9 @@ public class HondaDetails extends Base {
 			//String str1 = driver.findElement(By.xpath("(//span[@itemprop='name'])[3]")).getText();/html/body/div[10]/ol/li[3]/span
 			String str1 = driver.findElement(By.xpath("/html/body/div[10]/ol/li[3]/span")).getText();
 			if (str1.contains("Honda Bikes"))
-				reportPass("Manufacturer is HONDA");
+				ExtentReportManager.reportPass("Manufacturer is HONDA");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 
@@ -74,22 +76,22 @@ public class HondaDetails extends Base {
 
 	public void viewMore() // Method to click viewmore
 	{
-		logger = report.createTest("Accessing View More");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Accessing View More");
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(viewButton));
 			WebElement element = driver.findElement(viewButton);
 			JavascriptExecutor executor = (JavascriptExecutor) driver;
 			executor.executeScript("arguments[0].click();", element);
-			reportPass("View More is clicked");
+			ExtentReportManager.reportPass("View More is clicked");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 
 	public void printDetails() throws IOException // Method to print details on the console
 	{
-		logger = report.createTest("Obtaining bike prices");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Obtaining bike prices");
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(BikeNames));
 		List<WebElement> bikeNames = driver.findElements(BikeNames);
@@ -97,9 +99,9 @@ public class HondaDetails extends Base {
 		List<WebElement> bikeLaunch = driver.findElements(BikeLaunch);
 		count = bikeNames.size();
 		String priceTxt;
-		System.out.println("*******************************************************");
-		System.out.println("              Upcoming Bike Details:");
-		System.out.println("*******************************************************");
+//		System.out.println("*******************************************************");
+		System.out.println("########## Upcoming Bike Details: ###########");
+//		System.out.println("*******************************************************");
 		String str;
 		excel.writeToExcel("Bike Name", 0, 0);
 		excel.writeToExcel("Bike Price", 0, 1);
@@ -109,7 +111,7 @@ public class HondaDetails extends Base {
 				priceTxt = bikePrices.get(i).getText();
 				float price = Float.parseFloat(priceTxt.replaceAll("Rs. ", "").replaceAll(" Lakh", ""));
 				if (price < 4) {
-					str = bikeNames.get(i).getText() + "\t" + bikePrices.get(i).getText() + "\t"
+					str = bikeNames.get(i).getText() + "|" + "\t" + bikePrices.get(i).getText() + "|" + "\t"
 							+ bikeLaunch.get(i).getText();
 					System.out.println(str);
 					
@@ -120,9 +122,9 @@ public class HondaDetails extends Base {
 					rowNo++;
 				}
 			}
-			reportPass("Bike Prices are Obtained");
+			ExtentReportManager.reportPass("Bike Prices are Obtained");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 }

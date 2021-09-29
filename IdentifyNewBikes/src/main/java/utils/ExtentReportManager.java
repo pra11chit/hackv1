@@ -1,13 +1,18 @@
 package utils;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 
+import DriverSetup.DriverSetup;
 
 
-public class ExtentReportManager {
-	public static ExtentReports report;
+
+public class ExtentReportManager extends DriverSetup{
+	public static ExtentReports report = ExtentReportManager.getReportInstance();
+	public static ExtentTest logger= report.createTest("Opening Url");
 public static ExtentReports getReportInstance(){
 		
 		if(report== null){
@@ -28,6 +33,20 @@ public static ExtentReports getReportInstance(){
 		}
 		
 		return report;
+	}
+
+	public static void reportFail(String report) {
+		logger.log(Status.FAIL, report);
+		Screenshot.takeScreenShotOnFailure(driver);
+	}
+	
+	// Function to show the passed test cases in the report
+	public static void reportPass(String report) {
+		logger.log(Status.PASS, report);
+	}
+	
+	public static void reportInfo(String report) {
+		logger.log(Status.INFO, report);
 	}
 
 }

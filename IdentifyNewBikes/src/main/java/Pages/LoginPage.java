@@ -2,9 +2,10 @@ package Pages;
 
 import org.openqa.selenium.By;
 
-import Base.Base;
+import DriverSetup.DriverSetup;
+import utils.ExtentReportManager;
 
-public class LoginPage extends Base {
+public class LoginPage extends DriverSetup {
 	By lclose = By.id("alternate-login-close");
 	By login = By.id("des_lIcon");
 	By googleSignIn = By.xpath("(//span[text()='Continue with Google'])");
@@ -16,7 +17,7 @@ public class LoginPage extends Base {
 
 	public void clickLogin() // Method to click Login
 	{
-		logger = report.createTest("Displaying used car");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Displaying used car");
 		try {
 			driver.findElement(login).click();
 			Thread.sleep(5000);
@@ -25,15 +26,15 @@ public class LoginPage extends Base {
 					"//span[@class='hd fnt-20 fnt-black fnt-m rel i-b ml-10 lh-24 txt-l login-title headingText default']"))
 					.getText();
 			if (ver.contains(login1))
-				reportPass("Used Cars in chennai are displayed");
+				ExtentReportManager.reportPass("Used Cars in chennai are displayed");
 		} catch (Exception e) {
-			reportFail(e.getMessage());
+			ExtentReportManager.reportFail(e.getMessage());
 		}
 	}
 
 	public void clickGoogleSignIn() throws InterruptedException // Method to click Login
 	{
-		logger = report.createTest("Error Checking after signup");
+		ExtentReportManager.logger = ExtentReportManager.report.createTest("Error Checking after signup");
 		driver.findElement(googleSignIn).click();
 		for (String window : driver.getWindowHandles()) {
 			driver.switchTo().window(window);

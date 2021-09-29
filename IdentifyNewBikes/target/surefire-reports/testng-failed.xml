@@ -5,8 +5,6 @@
     <classes>
       <class name="TestSuite.Tests">
         <methods>
-          <include name="testingCars"/>
-          <include name="testingLogin"/>
           <include name="testing1"/>
         </methods>
       </class> <!-- TestSuite.Tests -->

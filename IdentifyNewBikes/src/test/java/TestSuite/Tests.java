@@ -4,14 +4,14 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import DriverSetup.DriverSetup;
 import Pages.ChennaiUsedCars;
 import Pages.HomePage;
 import Pages.HondaDetails;
 import Pages.LoginPage;
-import Base.Base;
 
 public class Tests {
-	Base bs = new Base();
+	DriverSetup bs = new DriverSetup();
 	
 	@Test(priority=0)
 	public void basic() {

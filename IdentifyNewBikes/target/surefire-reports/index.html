@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Command_line_suite" class="navigator-link">
-              <span class="suite-name border-passed">Command line suite</span>
+              <span class="suite-name border-failed">Command line suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Command_line_suite" class="hide-methods failed suite-Command_line_suite"> (hide)</a> <!-- hide-methods failed suite-Command_line_suite -->
+                      <a href="#" panel-name="suite-Command_line_suite" class="show-methods failed suite-Command_line_suite"> (show)</a> <!-- show-methods failed suite-Command_line_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Command_line_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="TestSuite.Tests" class="method navigator-link" hash-for-method="testing1">testing1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Command_line_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,11 +131,6 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Command_line_suite" title="TestSuite.Tests" class="method navigator-link" hash-for-method="testing1">testing1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Command_line_suite" title="TestSuite.Tests" class="method navigator-link" hash-for-method="testingCars">testingCars</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -142,6 +151,44 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Command_line_suite" class="panel Command_line_suite">
+          <div class="suite-Command_line_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestSuite.Tests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testing1">
+                  </a> <!-- testing1 -->
+                  <span class="method-name">testing1</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;headerNewNavWrap&quot;]/div[2]/ul/li[3]/ul/li[4]&quot;}
+  (Session info: chrome=94.0.4606.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-MA8SSCS&apos;, ip: &apos;192.168.210.130&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\PRATIK~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:26347}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e0a394cb1d0b2e283c5b44d495883a6d
+*** Element info: {Using=xpath, value=//*[@id=&quot;headerNewNavWrap&quot;]/div[2]/ul/li[3]/ul/li[4]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Pages.HondaDetails.clickUpcomingBikes(HondaDetails.java:71)
+	at TestSuite.Tests.testing1(Tests.java:38)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-failed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -167,13 +214,6 @@
                   <a name="testing">
                   </a> <!-- testing -->
                   <span class="method-name">testing</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testing1">
-                  </a> <!-- testing1 -->
-                  <span class="method-name">testing1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -249,29 +289,29 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testing')
+data.setCell(0, 1, 'testingCars')
 data.setCell(0, 2, 'TestSuite.Tests')
-data.setCell(0, 3, 26100);
+data.setCell(0, 3, 33812);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testing1')
 data.setCell(1, 2, 'TestSuite.Tests')
-data.setCell(1, 3, 12311);
+data.setCell(1, 3, 22797);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testingLogin')
+data.setCell(2, 1, 'testing')
 data.setCell(2, 2, 'TestSuite.Tests')
-data.setCell(2, 3, 12054);
+data.setCell(2, 3, 19368);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'basic')
+data.setCell(3, 1, 'testingLogin')
 data.setCell(3, 2, 'TestSuite.Tests')
-data.setCell(3, 3, 10369);
+data.setCell(3, 3, 14623);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testingCars')
+data.setCell(4, 1, 'basic')
 data.setCell(4, 2, 'TestSuite.Tests')
-data.setCell(4, 3, 3776);
+data.setCell(4, 3, 13444);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'lastStep')
 data.setCell(5, 2, 'TestSuite.Tests')
-data.setCell(5, 3, 1781);
+data.setCell(5, 3, 1428);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
@@ -309,23 +349,25 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testing</span>
-                <span class="method-start">10371 ms</span>
+                <span class="method-start">13447 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testing1</span>
-                <span class="method-start">36472 ms</span>
+                <span class="method-start">32816 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testingCars</span>
-                <span class="method-start">48784 ms</span>
+                <span class="method-start">55626 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testingLogin</span>
-                <span class="method-start">52561 ms</span>
+                <span class="method-start">89438 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">lastStep</span>
-                <span class="method-start">64615 ms</span>
+                <span class="method-start">104062 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
