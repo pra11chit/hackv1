@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-29T07:00:31Z" name="Command line suite" finished-at="2021-09-29T07:01:41Z" duration-ms="69351">
+  <suite started-at="2021-09-29T07:25:37Z" name="Command line suite" finished-at="2021-09-29T07:26:43Z" duration-ms="66422">
     <groups>
     </groups>
-    <test started-at="2021-09-29T07:00:31Z" name="Command line test" finished-at="2021-09-29T07:01:41Z" duration-ms="69351">
+    <test started-at="2021-09-29T07:25:37Z" name="Command line test" finished-at="2021-09-29T07:26:43Z" duration-ms="66422">
       <class name="TestSuite.Tests">
-        <test-method signature="basic()[pri:0, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:00:31Z" name="basic" finished-at="2021-09-29T07:00:44Z" duration-ms="12439" status="PASS">
+        <test-method signature="basic()[pri:0, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:25:37Z" name="basic" finished-at="2021-09-29T07:25:47Z" duration-ms="10369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basic -->
-        <test-method signature="testing()[pri:1, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:00:44Z" name="testing" finished-at="2021-09-29T07:01:07Z" duration-ms="23071" status="PASS">
+        <test-method signature="testing()[pri:1, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:25:47Z" name="testing" finished-at="2021-09-29T07:26:13Z" duration-ms="26100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testing -->
-        <test-method signature="testing1()[pri:2, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:01:07Z" name="testing1" finished-at="2021-09-29T07:01:16Z" duration-ms="9049" status="PASS">
+        <test-method signature="testing1()[pri:2, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:26:13Z" name="testing1" finished-at="2021-09-29T07:26:25Z" duration-ms="12311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testing1 -->
-        <test-method signature="testingCars()[pri:3, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:01:16Z" name="testingCars" finished-at="2021-09-29T07:01:23Z" duration-ms="6972" status="PASS">
+        <test-method signature="testingCars()[pri:3, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:26:25Z" name="testingCars" finished-at="2021-09-29T07:26:29Z" duration-ms="3776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testingCars -->
-        <test-method signature="testingLogin()[pri:4, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:01:23Z" name="testingLogin" finished-at="2021-09-29T07:01:38Z" duration-ms="14634" status="PASS">
+        <test-method signature="testingLogin()[pri:4, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:26:29Z" name="testingLogin" finished-at="2021-09-29T07:26:41Z" duration-ms="12054" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testingLogin -->
-        <test-method signature="lastStep()[pri:5, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:01:38Z" name="lastStep" finished-at="2021-09-29T07:01:41Z" duration-ms="3148" status="PASS">
+        <test-method signature="lastStep()[pri:5, instance:TestSuite.Tests@52af26ee]" started-at="2021-09-29T07:26:41Z" name="lastStep" finished-at="2021-09-29T07:26:43Z" duration-ms="1781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lastStep -->
