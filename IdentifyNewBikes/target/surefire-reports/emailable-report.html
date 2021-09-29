@@ -9,36 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Command line suite</th></tr>
-<tr><td><a href="#t0">Command line test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">53,144</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Command line test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">69,351</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestSuite.Tests</td><td><a href="#m0">testingLogin</a></td><td rowspan="1">1632891538290</td><td rowspan="1">19381</td></tr><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">TestSuite.Tests</td><td><a href="#m1">basic</a></td><td rowspan="1">1632891505413</td><td rowspan="1">11614</td></tr><tr class="passedeven"><td><a href="#m2">lastStep</a></td><td rowspan="1">1632891557674</td><td rowspan="1">854</td></tr><tr class="passedeven"><td><a href="#m3">testing</a></td><td rowspan="1">1632891517029</td><td rowspan="1">8444</td></tr><tr class="passedeven"><td><a href="#m4">testing1</a></td><td rowspan="1">1632891525473</td><td rowspan="1">6693</td></tr><tr class="passedeven"><td><a href="#m5">testingCars</a></td><td rowspan="1">1632891532167</td><td rowspan="1">6123</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Command line suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Command line test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">TestSuite.Tests</td><td><a href="#m0">basic</a></td><td rowspan="1">1632898831968</td><td rowspan="1">12439</td></tr><tr class="passedeven"><td><a href="#m1">lastStep</a></td><td rowspan="1">1632898898140</td><td rowspan="1">3148</td></tr><tr class="passedeven"><td><a href="#m2">testing</a></td><td rowspan="1">1632898844410</td><td rowspan="1">23071</td></tr><tr class="passedeven"><td><a href="#m3">testing1</a></td><td rowspan="1">1632898867483</td><td rowspan="1">9049</td></tr><tr class="passedeven"><td><a href="#m4">testingCars</a></td><td rowspan="1">1632898876533</td><td rowspan="1">6972</td></tr><tr class="passedeven"><td><a href="#m5">testingLogin</a></td><td rowspan="1">1632898883506</td><td rowspan="1">14634</td></tr></tbody>
 </table>
-<h2>Command line test</h2><h3 id="m0">TestSuite.Tests#testingLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div&quot;}
-  (Session info: chrome=94.0.4606.61)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-MA8SSCS&apos;, ip: &apos;192.168.210.130&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\WINDOWS\TEMP\scoped_dir1...}, goog:chromeOptions: {debuggerAddress: localhost:1030}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 79488f9d561a7dfd0053ae86a4b2e4d6
-*** Element info: {Using=xpath, value=/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[2]/div[2]/div}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at Pages.LoginPage.captureErrorMessage(LoginPage.java:52)
-	at TestSuite.Tests.testingLogin(Tests.java:60)
-... Removed 40 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestSuite.Tests#basic</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestSuite.Tests#lastStep</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">TestSuite.Tests#testing</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">TestSuite.Tests#testing1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">TestSuite.Tests#testingCars</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Command line test</h2><h3 id="m0">TestSuite.Tests#basic</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestSuite.Tests#lastStep</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestSuite.Tests#testing</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestSuite.Tests#testing1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestSuite.Tests#testingCars</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestSuite.Tests#testingLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
